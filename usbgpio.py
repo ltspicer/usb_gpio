@@ -1,12 +1,10 @@
 import serial
 import time
 
-
 class USBgpio:
     def __init__(self, device, speed):
         self.ser = serial.Serial(device, speed, timeout=1)
         time.sleep(1) 
-        
         return
 
     # Set pin mode to input.
@@ -31,7 +29,10 @@ class USBgpio:
             self.ser.write(b"i")
         elif pin == 11:
             self.ser.write(b"j")
-
+        elif pin == 12:
+            self.ser.write(b"N")
+        elif pin == 13:
+            self.ser.write(b"I")
         return
 
     # Set pin mode to output.
@@ -56,7 +57,10 @@ class USBgpio:
             self.ser.write(b"s")
         elif pin == 11:
             self.ser.write(b"t")
-
+        elif pin == 12:
+            self.ser.write(b"O")
+        elif pin == 13:
+            self.ser.write(b"L")
         return
 
     # Write to pin.
@@ -82,6 +86,10 @@ class USBgpio:
                 self.ser.write(b"2")
             elif pin == 11:
                 self.ser.write(b"3")
+            elif pin == 12:
+                self.ser.write(b"P")
+            elif pin == 13:
+                self.ser.write(b"H")
         elif level == "LOW":
             if pin == 2:
                 self.ser.write(b"4")
@@ -103,6 +111,10 @@ class USBgpio:
                 self.ser.write(b"#")
             elif pin == 11:
                 self.ser.write(b"$")
+            elif pin == 12:
+                self.ser.write(b"Q")
+            elif pin == 13:
+                self.ser.write(b"M")
 
     # Read from pin.
     def digital_read(self, pin):
@@ -126,8 +138,31 @@ class USBgpio:
             self.ser.write(b",")
         elif pin == 11:
             self.ser.write(b".")
-
+        elif pin == 12:
+            self.ser.write(b"R")
+        elif pin == 13:
+            self.ser.write(b"?")
         if self.ser.read() == b'\x00':
             return 0
         else:
             return 1
+
+    # ----------- Servo-Commands -----------
+
+    def servo_attach(self, pin):
+        # Pin als einzelne Ziffer senden (z.B. 8 -> b'A8')
+        cmd = b'A' + str(pin).encode()
+        self.ser.write(cmd)
+        time.sleep(0.05)  # Kurze Pause für Arduino
+
+    def servo_write(self, pin, angle):
+        # z.B. Pin 8, Winkel 90 -> b'B890'
+        cmd = b'B' + str(pin).encode() + str(int(angle)).encode()
+        self.ser.write(cmd)
+        time.sleep(0.05)
+
+    def servo_detach(self, pin):
+        cmd = b'C' + str(pin).encode()
+        self.ser.write(cmd)
+        time.sleep(0.05)
+
