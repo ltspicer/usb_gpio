@@ -16,21 +16,32 @@ import time
 
 
 # Establish a serial connection to the device.
-gpio = USBgpio('/dev/ttyACM0', 115200)
+gpio = USBgpio('/dev/ttyUSB0', 115200)
 
-# Set GPIO directions.
-gpio.set_output(2)
-gpio.set_input(3)
+# Set GPIO direction & set as output
+ledPIN = 2
+gpio.set_output(ledPIN)
+
+# Set input pin
+inputPIN = 3
+gpio.set_input(inputPIN)
+
+# Activate servo & set pin
+servoPIN = 8
+gpio.servo_attach(servoPIN)
 
 while True:
-    # Alternate between high and low voltage levels to blink an LED.
-    gpio.digital_write(2, "HIGH")
+    # Alternate between high and low voltage levels to blink an LED
+    # Toggle servo from 0° to 180°
+    gpio.digital_write(ledPIN, "HIGH")
+    gpio.servo_write(servoPIN, 0)     # Set servo to 0°
     time.sleep(1)
-    gpio.digital_write(2, "LOW")
+    gpio.digital_write(ledPIN, "LOW")
+    gpio.servo_write(servoPIN, 180)   # Set servo to 180°
     time.sleep(1)
 
     # Read the value of a pin and print the result.
-    print(gpio.digital_read(3))
+    print(gpio.digital_read(inputPIN))
 ```
 
 Inside the device's case, there is an Arduino Nano 33 IoT. Header pins on the device are internally connected to pins on the Arduino. This microcontroller development board runs [firmware](https://github.com/nickbild/usb_gpio/blob/main/usb_gpio_arduino/usb_gpio_arduino.ino) that listens for serial data coming in over USB, as triggered by the Python program. The firmware then decodes the data it receives and takes the requested action, whether it be to set a pin direction or voltage level. If a pin is being read, the Arduino also sends that value back to the Python program via the serial connection.
