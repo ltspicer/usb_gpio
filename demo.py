@@ -29,3 +29,4 @@ while True:
 
     # Read the value of a pin and print the result.
     print(gpio.digital_read(inputPIN))
+gpio.servo_detach(servoPIN)
