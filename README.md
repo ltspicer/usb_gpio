@@ -46,6 +46,7 @@ while True:
 
     # Read the value of a pin and print the result.
     print(gpio.digital_read(inputPIN))
+gpio.servo_detach(servoPIN)
 ```
 
 Inside the device's case, there is an Arduino Nano 33 IoT. Header pins on the device are internally connected to pins on the Arduino. This microcontroller development board runs [firmware](https://github.com/ltspicer/usb_gpio/blob/main/usb_gpio_arduino/usb_gpio_arduino.ino) that listens for serial data coming in over USB, as triggered by the Python program. The firmware then decodes the data it receives and takes the requested action, whether it be to set a pin direction or voltage level. If a pin is being read, the Arduino also sends that value back to the Python program via the serial connection.
