@@ -153,16 +153,16 @@ class USBgpio:
         # Pin als einzelne Ziffer senden (z.B. 8 -> b'A8')
         cmd = b'A' + str(pin).encode()
         self.ser.write(cmd)
-        time.sleep(0.05)  # Kurze Pause für Arduino
+        time.sleep(0.2)  # Kurze Pause für Arduino
 
     def servo_write(self, pin, angle):
         # z.B. Pin 8, Winkel 90 -> b'B890'
         cmd = b'B' + str(pin).encode() + str(int(angle)).encode()
         self.ser.write(cmd)
-        time.sleep(0.05)
+        time.sleep(0.2)
 
     def servo_detach(self, pin):
         cmd = b'C' + str(pin).encode()
         self.ser.write(cmd)
-        time.sleep(0.05)
+        time.sleep(0.2)
 

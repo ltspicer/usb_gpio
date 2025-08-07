@@ -1,7 +1,6 @@
 from usbgpio import USBgpio
 import time
 
-
 # Establish a serial connection to the device.
 gpio = USBgpio('/dev/ttyUSB0', 115200)
 
@@ -29,4 +28,5 @@ while True:
 
     # Read the value of a pin and print the result.
     print(gpio.digital_read(inputPIN))
+
 gpio.servo_detach(servoPIN)
