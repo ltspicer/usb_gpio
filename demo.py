@@ -5,7 +5,7 @@ import time
 gpio = USBgpio('/dev/ttyUSB0', 115200)
 
 # Set GPIO direction & set as output
-ledPIN = 2
+ledPIN = 13
 gpio.set_output(ledPIN)
 
 # Set input pin
