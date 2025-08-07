@@ -34,7 +34,9 @@ void loop() {
       while (Serial.available() < 2); // Warten auf Pin und mindestens 1 Ziffer
       int pin = Serial.read() - '0';
       int idx = get_servo_index(pin);
+      delay(2);
       char winkel_str[4] = {0};
+
       int i = 0;
       // Bis zu 3 Ziffern für Winkel einlesen (z.B. 180)
       while (i < 3 && Serial.available()) {
@@ -46,6 +48,7 @@ void loop() {
         }
       }
       int winkel = atoi(winkel_str);
+
       if (idx != -1 && servo_attached[idx]) {
         servos[idx].write(winkel);
       }
