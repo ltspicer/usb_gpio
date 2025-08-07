@@ -21,6 +21,7 @@ import time
 
 # Establish a serial connection to the device.
 gpio = USBgpio('/dev/ttyUSB0', 115200)
+time.sleep(1)       # Important!!! --- Wichtig!!!
 
 # Set GPIO direction & set as output
 ledPIN = 2
