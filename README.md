@@ -2,7 +2,7 @@
 
 Add Python programmable GPIO pins to any computer with USBgpio.
 
-![](https://raw.githubusercontent.com/nickbild/usb_gpio/main/media/logo_sm.jpg)
+![](https://github.com/ltspicer/usb_gpio/blob/main/media/logo_sm.jpg)
 
 ## How It Works
 
@@ -56,35 +56,35 @@ USBgpio is a quick and easy way to do some prototyping without getting out your 
 
 This trace shows a pin flipping between high and low voltages in a tight loop:
 
-![](https://raw.githubusercontent.com/nickbild/usb_gpio/main/media/usbgpio.png)
+![](https://github.com/ltspicer/usb_gpio/blob/main/media/usbgpio.png)
 
 ## Media
 
 [Demo Video](https://www.youtube.com/watch?v=I5nCYR48eAI)
 
-![](https://raw.githubusercontent.com/nickbild/usb_gpio/main/media/front1_sm.jpg)
+![](https://github.com/ltspicer/usb_gpio/blob/main/media/front1_sm.jpg)
 
-![](https://raw.githubusercontent.com/nickbild/usb_gpio/main/media/front2_sm.jpg)
+![](https://github.com/ltspicer/usb_gpio/blob/main/media/front2_sm.jpg)
 
 Blinking an LED with USBgpio:
 
-![](https://raw.githubusercontent.com/nickbild/usb_gpio/main/media/blink_sm.jpg)
+![](https://github.com/ltspicer/usb_gpio/blob/main/media/blink_sm.jpg)
 
 The back of the unit:
 
-![](https://raw.githubusercontent.com/nickbild/usb_gpio/main/media/rear_sm.jpg)
+![](https://github.com/ltspicer/usb_gpio/blob/main/media/rear_sm.jpg)
 
 The wires that run from the header to the Arduino:
 
-![](https://raw.githubusercontent.com/nickbild/usb_gpio/main/media/wires_sm.jpg)
+![](https://github.com/ltspicer/usb_gpio/blob/main/media/wires_sm.jpg)
 
 The Arduino with a header designed to fit in the case:
 
-![](https://raw.githubusercontent.com/nickbild/usb_gpio/main/media/arduino_sm.jpg)
+![](https://github.com/ltspicer/usb_gpio/blob/main/media/arduino_sm.jpg)
 
 Testing the device:
 
-![](https://raw.githubusercontent.com/nickbild/usb_gpio/main/media/testing_sm.jpg)
+![](https://github.com/ltspicer/usb_gpio/blob/main/media/testing_sm.jpg)
 
 ## Bill of Materials
 
