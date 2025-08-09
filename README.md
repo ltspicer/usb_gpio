@@ -58,12 +58,7 @@ This trace shows a pin flipping between high and low voltages in a tight loop:
 
 ![](https://github.com/ltspicer/usb_gpio/blob/main/media/usbgpio.png)
 
-## Media
-
-[Demo Video](https://www.youtube.com/watch?v=I5nCYR48eAI)
-
-
-## Bill of Materials
+## Parts
 
 - 1 x Arduino Nano
 - 1 x USB-A to micro USB-B cable
