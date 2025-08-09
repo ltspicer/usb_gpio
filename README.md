@@ -67,8 +67,6 @@ This trace shows a pin flipping between high and low voltages in a tight loop:
 
 - 1 x Arduino Nano 33 IoT
 - 1 x USB-A to micro USB-B cable
-- 1 x 3D-printed case
-- 12 x Header pins, wires, DuPont connectors
 
 ## About the Author
 
