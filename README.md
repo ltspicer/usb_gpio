@@ -57,7 +57,7 @@ The library usbgpio.py must be in the same directory than the Python code.
 
 ## Use
 
-Connect the Arduino Nano **via USB to PC**. Flash the [firmware](https://github.com/ltspicer/usb_gpio/blob/main/usb_gpio_arduino/usb_gpio_arduino.ino) to the **Arduino nano** device with **Arduino IDE**
+Connect the "Arduino Nano" **via USB to PC**. Flash the [firmware](https://github.com/ltspicer/usb_gpio/blob/main/usb_gpio_arduino/usb_gpio_arduino.ino) to the "Arduino nano" device with **Arduino IDE**
 
 and have fun
 
