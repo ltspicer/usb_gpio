@@ -8,9 +8,9 @@ Add Python programmable GPIO pins to any computer with USBgpio.
 
 USBgpio provides 12 GPIO pins via a USB port on any modern computer. There is also an accompanying [Python library](https://github.com/ltspicer/usb_gpio/blob/main/usbgpio.py) that controls the GPIO pins with simple commands.
 
-Available digital pins: 2 to 13
+Available digital pins: 2 to 13 (input or output)
 
-Available servo pins: 2 to 9
+Available servo pins: 2 to 9 (only output)
 
 This brief example demonstrates the basics of using USBgpio (demo.py):
 
