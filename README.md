@@ -52,6 +52,8 @@ gpio.servo_detach(servoPIN)
 
 The [firmware](https://github.com/ltspicer/usb_gpio/blob/main/usb_gpio_arduino/usb_gpio_arduino.ino) waits for serial data, which is received via USB and triggered by the Python program. The firmware then decodes the received data and performs the requested action, be it setting a pin direction or a voltage level or servo control. When a pin is read, the Arduino also sends this value back to the Python program via the serial connection (USB).
 
+The library usbgpio.py must be in the same directory than the Python code.
+
 ## Parts
 
 - 1 x Arduino Nano
