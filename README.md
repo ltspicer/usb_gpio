@@ -62,29 +62,6 @@ This trace shows a pin flipping between high and low voltages in a tight loop:
 
 [Demo Video](https://www.youtube.com/watch?v=I5nCYR48eAI)
 
-![](https://github.com/ltspicer/usb_gpio/blob/main/media/front1_sm.jpg)
-
-![](https://github.com/ltspicer/usb_gpio/blob/main/media/front2_sm.jpg)
-
-Blinking an LED with USBgpio:
-
-![](https://github.com/ltspicer/usb_gpio/blob/main/media/blink_sm.jpg)
-
-The back of the unit:
-
-![](https://github.com/ltspicer/usb_gpio/blob/main/media/rear_sm.jpg)
-
-The wires that run from the header to the Arduino:
-
-![](https://github.com/ltspicer/usb_gpio/blob/main/media/wires_sm.jpg)
-
-The Arduino with a header designed to fit in the case:
-
-![](https://github.com/ltspicer/usb_gpio/blob/main/media/arduino_sm.jpg)
-
-Testing the device:
-
-![](https://github.com/ltspicer/usb_gpio/blob/main/media/testing_sm.jpg)
 
 ## Bill of Materials
 
