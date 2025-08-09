@@ -65,7 +65,7 @@ This trace shows a pin flipping between high and low voltages in a tight loop:
 
 ## Bill of Materials
 
-- 1 x Arduino Nano 33 IoT
+- 1 x Arduino Nano
 - 1 x USB-A to micro USB-B cable
 
 ## About the Author
