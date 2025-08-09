@@ -57,7 +57,7 @@ The library usbgpio.py must be in the same directory than the Python code.
 
 ## Parts
 
-- 1 x Arduino Nano ( https://de.aliexpress.com/item/1005006472746115.html ~3$ )
+- 1 x Arduino Nano ( https://de.aliexpress.com/item/1005006472746115.html >> less than 3$ )
 
 ## About the Author
 
