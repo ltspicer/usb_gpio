@@ -12,7 +12,7 @@ Available digital pins: 2 to 13
 
 Available servo pins: 2 to 9
 
-This brief example demonstrates the basics of using USBgpio:
+This brief example demonstrates the basics of using USBgpio (demo.py):
 
 ```python
 from usbgpio import USBgpio
