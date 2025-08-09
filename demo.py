@@ -5,29 +5,30 @@ import time
 gpio = USBgpio('/dev/ttyUSB0', 115200)
 time.sleep(1)       # Important!!! --- Wichtig!!!
 
-# Set GPIO direction & set as output
+# Set GPIO pin as output
 ledPIN = 13
 gpio.set_output(ledPIN)
 
-# Set input pin
+# Set GPIO pin as input
 inputPIN = 3
 gpio.set_input(inputPIN)
 
-# Activate servo & set pin
+# Set servo pin & activate (attach) it
 servoPIN = 8
 gpio.servo_attach(servoPIN)
 
 while True:
     # Alternate between high and low voltage levels to blink an LED
     # Toggle servo from 0° to 180°
-    gpio.digital_write(ledPIN, "HIGH")
-    gpio.servo_write(servoPIN, 0)     # Set servo to 0°
+    gpio.digital_write(ledPIN, "HIGH")  # LED on
+    gpio.servo_write(servoPIN, 0)       # Set servo to 0°
     time.sleep(1)
-    gpio.digital_write(ledPIN, "LOW")
-    gpio.servo_write(servoPIN, 180)   # Set servo to 180°
+    gpio.digital_write(ledPIN, "LOW")   # LED off
+    gpio.servo_write(servoPIN, 180)     # Set servo to 180°
     time.sleep(1)
 
     # Read the value of a pin and print the result.
     print(gpio.digital_read(inputPIN))
 
+# Detach servo
 gpio.servo_detach(servoPIN)
