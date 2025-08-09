@@ -14,6 +14,8 @@ Available servo pins: 2 to 9
 
 This brief example demonstrates the basics of using USBgpio (demo.py):
 
+![](https://github.com/ltspicer/usb_gpio/blob/main/demo.py)
+
 ```python
 from usbgpio import USBgpio
 import time
