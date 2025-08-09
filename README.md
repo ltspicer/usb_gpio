@@ -54,10 +54,6 @@ Inside the device's case, there is an Arduino Nano 33 IoT. Header pins on the de
 
 USBgpio is a quick and easy way to do some prototyping without getting out your development boards, setting them up, connecting to a network, remotely accessing them, etc. It is pretty fast at ~54 microseconds to change a pin state, so it will work for many use cases. However, an Arduino UNO, for example, is about 16 times faster, so for high-speed applications, USBgpio would not be appropriate. That is not the intended use case for this device, however — USBgpio is meant for convenience, not squeezing out every last ounce of performance.
 
-This trace shows a pin flipping between high and low voltages in a tight loop:
-
-![](https://github.com/ltspicer/usb_gpio/blob/main/media/usbgpio.png)
-
 ## Parts
 
 - 1 x Arduino Nano
