@@ -6,7 +6,7 @@ gpio = USBgpio('/dev/ttyUSB0', 115200)
 time.sleep(1)       # Important!!! --- Wichtig!!!
 
 # Set GPIO pin as output
-ledPIN = 13
+ledPIN = 13         # 13 is the onboard LED
 gpio.set_output(ledPIN)
 
 # Set GPIO pin as input
