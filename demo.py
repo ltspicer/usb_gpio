@@ -21,10 +21,10 @@ while True:
     # Alternate between high and low voltage levels to blink an LED
     # Toggle servo from 0° to 180°
     gpio.digital_write(ledPIN, "HIGH")  # LED on
-    gpio.servo_write(servoPIN, 0)       # Set servo to 0°
+    gpio.servo_write(servoPIN, 0)       # Move servo to 0°
     time.sleep(1)
     gpio.digital_write(ledPIN, "LOW")   # LED off
-    gpio.servo_write(servoPIN, 180)     # Set servo to 180°
+    gpio.servo_write(servoPIN, 180)     # Move servo to 180°
     time.sleep(1)
 
     # Read the value of a pin and print the result.
