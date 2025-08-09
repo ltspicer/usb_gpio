@@ -65,4 +65,4 @@ This trace shows a pin flipping between high and low voltages in a tight loop:
 
 ## About the Author
 
-[Nick A. Bild, MS](https://nickbild79.firebaseapp.com/#!/) forked by [ltspicer](https://www.ltspiceusers.ch/)
+[Nick A. Bild, MS](https://nickbild79.firebaseapp.com/#!/) forked by [spicer](https://www.ltspiceusers.ch/)
