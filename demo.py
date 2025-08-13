@@ -20,10 +20,10 @@ gpio.servo_attach(servoPIN)
 while True:
     # Alternate between high and low voltage levels to blink an LED
     # Toggle servo from 0° to 180°
-    gpio.digital_write(ledPIN, "HIGH")  # LED on. Can also be "HIGH", "high", "High" or 1
+    gpio.digital_write(ledPIN, "HIGH")  # LED on. Can also be "HIGH", "high", "High", "True", "true", "TRUE" or 1
     gpio.servo_write(servoPIN, 0)       # Move servo to 0°
     time.sleep(1)
-    gpio.digital_write(ledPIN, 0)       # LED off Can also be "LOW", "low", "Low" or 0
+    gpio.digital_write(ledPIN, 0)       # LED off Can also be "LOW", "low", "Low", "False", "false", "FALSE" or 0
     gpio.servo_write(servoPIN, 180)     # Move servo to 180°
     time.sleep(1)
 

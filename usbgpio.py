@@ -65,7 +65,7 @@ class USBgpio:
 
     # Write to pin.
     def digital_write(self, pin, level):
-        if str(level) == "1" or str(level).upper() == "HIGH":
+        if str(level) == "1" or str(level).upper() == "HIGH" or str(level).upper() == "TRUE":
             if pin == 2:
                 self.ser.write(b"u")
             elif pin == 3:
@@ -90,7 +90,7 @@ class USBgpio:
                 self.ser.write(b"P")
             elif pin == 13:
                 self.ser.write(b"H")
-        elif str(level) == "0" or str(level).upper() == "LOW":
+        elif str(level) == "0" or str(level).upper() == "LOW" or str(level).upper() == "FALSE":
             if pin == 2:
                 self.ser.write(b"4")
             elif pin == 3:
